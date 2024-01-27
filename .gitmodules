@@ -1,3 +1,0 @@
-[submodule "toolchain/libgloss"]
-	path = toolchain/libgloss
-	url = https://github.com/ucb-bar/libgloss-htif/

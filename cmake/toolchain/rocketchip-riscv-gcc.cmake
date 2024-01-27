@@ -46,6 +46,4 @@ set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -march=${CMAKE_SYSTEM_PROCESSOR} -mabi=${CMAKE_C_COMPILER_ABI}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostartfiles -static")
 
-
-# Test if libgloss is ready
-try_compile(COMPILE_RESULT SOURCE_FROM_FILE . compiletest.c)
+# Get libgloss_htif
