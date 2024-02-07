@@ -2,7 +2,7 @@ if (DEFINED RVENV_TOOLCHAIN)
 	if (RVENV_TOOLCHAIN STREQUAL "host")
 		# Don't need to load a toolchain file for host. Just use CMake default values.
 	else()
-		set(RVENV_TOOLCHAIN_DIR ${RVENV_DIR}/cmake/toolchain)
+		set(RVENV_TOOLCHAIN_DIR ${RVENV_PATH}/cmake/toolchain)
 		set(RVENV_TOOLCHAIN_FILE ${RVENV_TOOLCHAIN_DIR}/${RVENV_TOOLCHAIN}.cmake)
 
 		if (EXISTS "${RVENV_TOOLCHAIN_FILE}")

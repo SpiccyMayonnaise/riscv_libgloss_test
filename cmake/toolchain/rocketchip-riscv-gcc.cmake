@@ -37,13 +37,12 @@ set(CMAKE_ASM_COMPILER ${TOOL_PREFIX}gcc)
 set(CMAKE_AR ${TOOL_PREFIX}ar)
 
 # Set flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -fno-builtin-printf -Wall")
+set(CMAKE_C_FLAGS "-fno-common -fno-builtin-printf -specs=htif_nano.specs -Wall")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=${CMAKE_SYSTEM_PROCESSOR} -mabi=${CMAKE_C_COMPILER_ABI}")
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "")
-set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "")
+set(CMAKE_EXE_LINKER_FLAGS "-march=${CMAKE_SYSTEM_PROCESSOR} -mabi=${CMAKE_C_COMPILER_ABI}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -march=${CMAKE_SYSTEM_PROCESSOR} -mabi=${CMAKE_C_COMPILER_ABI}")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostartfiles -static")
+set(CMAKE_EXECUTABLE_SUFFIX_C ".riscv")
 
 # Get libgloss_htif

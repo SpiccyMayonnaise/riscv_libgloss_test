@@ -1,0 +1,1 @@
+set(RVENV_TOOLCHAIN rocketchip-riscv-gcc)
