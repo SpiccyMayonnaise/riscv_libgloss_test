@@ -45,4 +45,6 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
 
 set(CMAKE_EXECUTABLE_SUFFIX_C ".riscv")
 
+add_compile_definitions(RV)
+
 # Get libgloss_htif
